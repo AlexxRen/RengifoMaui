@@ -30,7 +30,7 @@
                 <!-- selectores con 3 operadoras-->
                 <Picker x:Name="inputOperador"
                           Title="Escoja su operaddor"
-                        Margin="20">
+                          Margin="20">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Movistar</x:String>
@@ -43,22 +43,24 @@
                 <VerticalStackLayout>
                     <Label Text="Seleccione su operador"
                            Margin="20"/>
-                    <RadioButton Content="3$" 
+                    <RadioButton x:Name="input_recarga_3"
+                                 Content="3$" 
                                  Value="3"
                                  IsChecked="true" />
-                    <RadioButton Content="5$" 
+                    <RadioButton x:Name="input_recarga_5"
+                                 Content="5$" 
                                  Value="5"/>
-                    <RadioButton Content="10$" 
+                    <RadioButton x:Name="input_recarga_10"
+                                 Content="10$" 
                                  Value="10"/>
                 </VerticalStackLayout>
                 
             </HorizontalStackLayout>
-
+            <Label
+                x:Name="mensaje"></Label>
             <Button
                 x:Name="CounterBtn"
                 Text="Recargar" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
         </StackLayout>
         
